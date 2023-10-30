@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persons with 2 params</title>
+</head>
+<body>
+
+    <div th:unless="${persons.isEmpty()}">
+        <div th:each="p, personIndex : ${persons}">
+            <span th:if="${personIndex.index} == ${key}">
+                    <h3 th:text="${p}"></h3>
+            </span>
+            <span th:if="${personIndex.index} ==${secondKey}">
+                Et
+                <h3 th:text="${p}"></h3>
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
